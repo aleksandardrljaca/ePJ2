@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane fx:controller="org.unibl.etf.epj2.controllers.ReportController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="830.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+  <tabs>
+    <Tab text="Summary report">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="179.0" layoutY="61.0" prefHeight="395.0" prefWidth="226.0" spacing="30.0">
+                     <children>
+                        <Label text="TOTAL INCOME:" />
+                        <Label text="TOTAL DISCOUNTS:" />
+                        <Label text="TOTAL PROMOTION DISCOUNTS:" />
+                        <Label text="TOTAL DISTANCES AMOUNT:" />
+                        <Label text="TOTAL MAINTENANCE COST:" />
+                        <Label text="TOTAL MALFUNCTION REPAIRS COST:" />
+                        <Label text="TOTAL COMPANY COSTS:" />
+                        <Label text="TAX TOTAL:" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="428.0" layoutY="61.0" prefHeight="395.0" prefWidth="226.0" spacing="30.0">
+                     <children>
+                        <Label fx:id="incomeLbl" text="Label" />
+                        <Label fx:id="discountsLbl" text="Label" />
+                        <Label fx:id="promoLbl" text="Label" />
+                        <Label fx:id="distancesLbl" text="Label" />
+                        <Label fx:id="maintenanceLbl" text="Label" />
+                        <Label fx:id="repairsLbl" text="Label" />
+                        <Label fx:id="companyCostsLbl" text="Label" />
+                        <Label fx:id="taxLbl" text="Label" />
+                     </children>
+                  </VBox>
+                  <Label layoutX="353.0" layoutY="24.0" text="SUMMARY REPORT" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Daily reports">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="dailyTable" layoutX="12.0" layoutY="72.0" prefHeight="408.0" prefWidth="807.0">
+                    <columns>
+                      <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
+                      <TableColumn fx:id="incomeCol" prefWidth="94.0" text="Total income" />
+                        <TableColumn fx:id="discountsCol" prefWidth="114.0" text="Discounts total" />
+                        <TableColumn fx:id="promCol" prefWidth="125.0" text="Promotions total" />
+                        <TableColumn fx:id="distCol" minWidth="0.0" prefWidth="122.0" text="Distances total" />
+                        <TableColumn fx:id="maintCol" prefWidth="135.0" text="Maintenance total" />
+                        <TableColumn fx:id="repairsCol" prefWidth="140.0" text="Repair costs" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="356.0" layoutY="28.0" text="DAILY REPORT" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
