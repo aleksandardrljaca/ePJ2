@@ -116,7 +116,7 @@ public class Simulation {
                             }).start();
                         }
                         countDownLatch.countDown();
-                        sleep(500);
+                        sleep(2500);
                     });
             sleep(5000);
         }
@@ -164,6 +164,7 @@ public class Simulation {
             rent.getVehicle().decreaseBatteryLevel(1);
             ReceiptUtil.vehicles.get(rent.getVehicle().getId()).decreaseBatteryLevel(1);
             paint.accept(i,userNBatteryLevel);
+            //System.out.println(rent.getVehicle().getId() +" on position "+i +" battery level= "+rent.getVehicle().getBatteryLevel()+"%");
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {

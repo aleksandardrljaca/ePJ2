@@ -224,7 +224,7 @@ public class ParserUtil {
      * @return Returns boolean value
      */
     private static boolean isAllRentDataPresent(String[] data){
-        return (!data[0].isEmpty() && !data[1].isEmpty()  && !data[2].isEmpty() && !data[3].isEmpty()
+        return (data.length==8 && !data[0].isEmpty() && !data[1].isEmpty()  && !data[2].isEmpty() && !data[3].isEmpty()
                 && !data[4].isEmpty() && !data[5].isEmpty() &&!data[6].isEmpty() && !data[7].isEmpty());
     }
 

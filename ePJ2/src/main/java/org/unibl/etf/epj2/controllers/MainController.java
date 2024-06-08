@@ -69,9 +69,9 @@ public class MainController {
 
         for (int i = 0; i < 20; i++) {
             ColumnConstraints colConstraints = new ColumnConstraints();
-            colConstraints.setMinWidth(35);
-            colConstraints.setPrefWidth(35);
-            colConstraints.setMaxWidth(35);
+            colConstraints.setMinWidth(42);
+            colConstraints.setPrefWidth(42);
+            colConstraints.setMaxWidth(42);
             mapPane.addColumn(i);
             mapPane.getColumnConstraints().add(colConstraints);
         }
@@ -89,8 +89,8 @@ public class MainController {
             for (int j = 0; j < 20; j++) {
                 Button b = new Button("");
                 b.setStyle("-fx-background-color: #ffffff");
-                b.setFont(Font.font(10));
-                b.setMinWidth(35);
+                b.setFont(Font.font(8));
+                b.setMinWidth(42);
                 b.setMinHeight(35);
                 mapPane.add(b, j, i);
             }
@@ -119,10 +119,12 @@ public class MainController {
         });
         Consumer<Boolean> enableButtons=p->{
           if(p){
+              vehiclesBtn.setDisable(false);
               malfunctionBtn.setDisable(false);
               financialBtn.setDisable(false);
               lossesBtn.setDisable(false);
           }else{
+              vehiclesBtn.setDisable(true);
               malfunctionBtn.setDisable(true);
               financialBtn.setDisable(true);
               lossesBtn.setDisable(true);
@@ -204,7 +206,8 @@ public class MainController {
      */
     public void startBtnClicked(MouseEvent mouseEvent) {
         startBtn.setDisable(true);
-        new Thread(Simulation::startSimulation).start();
+        if(!ReceiptUtil.rents.isEmpty())
+            new Thread(Simulation::startSimulation).start();
 
     }
 

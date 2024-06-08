@@ -20,7 +20,7 @@
             <Button fx:id="lossesBtn" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#lossBtnClicked" prefHeight="40.0" prefWidth="119.0" text="LOSS" />
          </items>
       </ToolBar>
-      <GridPane fx:id="mapPane" gridLinesVisible="true" layoutX="83.0" layoutY="61.0" maxHeight="693.0" maxWidth="1211.0" minHeight="693.0" minWidth="743.0" prefHeight="693.0" prefWidth="743.0">
+      <GridPane fx:id="mapPane" gridLinesVisible="true" layoutX="5.0" layoutY="61.0" maxHeight="693.0" maxWidth="1211.0" minHeight="693.0" minWidth="743.0" prefHeight="693.0" prefWidth="840.0">
 
       </GridPane>
    </children>
